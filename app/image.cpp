@@ -11,18 +11,18 @@
 #include "./image.hpp"
 /**
  * @brief Construct a new Image:: Image object
- * 
- * @param pathToImage 
+ *
+ * @param pathToImage
  */
 Image::Image(cv::Mat &img) {
   // this->imagePath = pathToImage;
   this->image = img;
 }
 
-cv::Mat Image::getImage() { return this->image; }
+cv::Mat Image::get_image() { return this->image; }
 /**
  * @brief To view the image frame
- * 
+ *
  */
 // void Image::view() {
 //   cout << "Photo in View\tPress 0 to close";
@@ -60,14 +60,18 @@ cv::Mat Image::draw_rectangles(int detections, std::vector<Detection> output) {
   for (int i{}; i < static_cast<int>(detections); i++) {
     //// LCOV_EXCL_START
     auto rectangle = output[i];
-   
+
     auto box = output[i].box;
     if (output[i].depth > 4) {
-      cv::putText(out_img, std::to_string(output[i].depth) + "ft",cv::Point(box.x, box.y - 5), cv::FONT_HERSHEY_SIMPLEX, 0.75,cv::Scalar(255, 255, 0));
+      cv::putText(out_img, std::to_string(output[i].depth) + "ft",
+                  cv::Point(box.x, box.y - 5), cv::FONT_HERSHEY_SIMPLEX, 0.75,
+                  cv::Scalar(255, 255, 0));
       cv::rectangle(out_img, rectangle.box, cv::Scalar(255, 255, 0), 3);
-    
+
     } else {
-      cv::putText(out_img, std::to_string(output[i].depth) + "ft",cv::Point(box.x, box.y - 5), cv::FONT_HERSHEY_SIMPLEX, 0.75,cv::Scalar(0, 0, 255));
+      cv::putText(out_img, std::to_string(output[i].depth) + "ft",
+                  cv::Point(box.x, box.y - 5), cv::FONT_HERSHEY_SIMPLEX, 0.75,
+                  cv::Scalar(0, 0, 255));
       cv::rectangle(out_img, rectangle.box, cv::Scalar(0, 0, 255), 3);
       //// LCOV_EXCL_STOP
     }
