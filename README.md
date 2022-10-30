@@ -34,7 +34,7 @@ This project will be completed using AIP process with the involvement of 3 progr
 
 [UML Class Diagram Phase 1](https://drive.google.com/file/d/1Ky4Y5SGkwsw3tudvV3qMJoQ9zC0JVxFh/view?usp=sharing)
 
-[UML Class Diagram Phase 2](https://drive.google.com/file/d/1glShZYrTTs4PfVRKWUgJwSy6m5da1fdX/view?usp=sharing)
+[UML Class Diagram Phase 2](https://drive.google.com/file/d/1xF7PE5MW7kFWYr2fqHmUKthmnKxsGlzh/view?usp=sharing)
 
 [Activity Diagram Phase 0](https://drive.google.com/file/d/1PFQ3R563C5RVZqSqUmu6HlybmQZDz23V/view?usp=sharing)
 
@@ -76,6 +76,17 @@ Run tests: ./test/cpp-test
 Run program: ./app/shell-app
 ```
 
+## How to build and see output on custom video
+```
+git clone https://github.com/nvnmangla/HumanDetecterAndTracker.git
+cd <path to repository>
+mkdir build
+cd build
+cmake ..
+make
+Run tests: ./test/cpp-test
+Run program: ./app/shell-app <video path>
+```
 
 ## To Generate and Check code coverage
 ```
