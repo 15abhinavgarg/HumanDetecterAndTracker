@@ -9,8 +9,11 @@
  *
  */
 
-#ifndef HUMANDETECTERANDTRACKER_INCLUDE_YOLO_HPP_
-#define HUMANDETECTERANDTRACKER_INCLUDE_YOLO_HPP_
+#ifndef INCLUDE_YOLO_HPP_
+#define INCLUDE_YOLO_HPP_
+
+#include<string>
+#include<vector>
 
 #include <image.hpp>
 
@@ -53,4 +56,4 @@ class Yolo {
   void remove_redundant_box(float &, Image &, std::vector<cv::Rect>,
                             std::vector<float>);
 };
-#endif  // HUMANDETECTERANDTRACKER_INCLUDE_YOLO_HPP_"
+#endif  // INCLUDE_YOLO_HPP_"
